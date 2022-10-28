@@ -15,8 +15,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
+    protected $guarded = [
     ];
 
     /**
@@ -36,4 +35,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function detail(){
+        return $this->belongsTo(UserDetail::class);
+    }
+
+    public function bill(){
+        return $this->belongsTo(bill::class);
+    }
 }
