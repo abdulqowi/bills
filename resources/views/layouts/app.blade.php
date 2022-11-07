@@ -31,7 +31,7 @@
     @stack('styles')
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini layout-fixed {{ request()->routeIs('purchases.create') || request()->routeIs('sales.create') ? 'sidebar-collapse' : ''}}">
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -55,7 +55,7 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-{{ date('Y') }} <a href="https://ikhsanheriyawan2404.github.io.io">Created by Qowi </a>.</strong>
+            <strong>Copyright &copy; 2014-{{ date('Y') }} <a href="https://ikhsanheriyawan2404.github.io.io">Created by Qowi & Ikhsan</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 9.9.9
@@ -63,6 +63,9 @@
         </footer>
 
         <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
